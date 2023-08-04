@@ -35,7 +35,7 @@ def run_command(command):
 if __name__ == "__main__":
     found_path = find_string_in_directory(checkPath, identifier)
     if found_path is not None:
-    #    run_command(f'docker compose -f {found_path} -p mediaserver down && docker compose -f {found_path} -p mediaserver up -d')
+        run_command(f'docker compose -f {found_path} -p mediaserver down && docker compose -f {found_path} -p mediaserver up -d')
         print("Restart done :)")
     else:
         print(f'Could not find "{identifier}" in any text file in the directory: {checkPath}')
